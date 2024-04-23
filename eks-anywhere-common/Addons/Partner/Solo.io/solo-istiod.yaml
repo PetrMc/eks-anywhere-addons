@@ -14,12 +14,4 @@ spec:
         name: solo-istiod-charts
         namespace: flux-system
       version: 1.18.3-eks-a
-  values:
-    base:
-      defaultRevision: ""
-    revision: 1-18-3
-    cni:
-      revision: 1-18-3
-    global:
-      istioNamespace: solo-istio-system
   interval: 1m0s
