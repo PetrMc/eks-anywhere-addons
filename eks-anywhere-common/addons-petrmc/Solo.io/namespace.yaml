@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: solo-istio-system
+  name: istio-system
   labels:
     istio.io/rev: 1-18-3
     aws.conformance.vendor: solo.io
