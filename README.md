@@ -174,9 +174,15 @@ flux create kustomization addons-snow-partner \
     --interval=5m 
 ```
 
+https://github.com/PetrMc/eks-anywhere-addons.git
+
+flux create source git addons-petrmc \
+    --url=https://github.com/PetrMc/eks-anywhere-addons.git \
+    --branch=tetrate
+
 flux create kustomization addons-solo \
-    --source=addons \
-    --path="./eks-anywhere-common/Addons/Partner/Solo.io/" \
+    --source=addons-petrmc \
+    --path="./eks-anywhere-common/addons-petrmc/" \
     --prune=true \
     --interval=30s 
 
