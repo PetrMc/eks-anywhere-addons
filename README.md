@@ -174,6 +174,12 @@ flux create kustomization addons-snow-partner \
     --interval=5m 
 ```
 
+flux create kustomization addons-solo \
+    --source=addons \
+    --path="./eks-anywhere-common/Addons/Partner/Solo.io/" \
+    --prune=true \
+    --interval=30s 
+
 The given example will attempt to deploy all solutions it can find in the *./eks-anywhere-snow/Addons/Partner* directory tree. You can limit your testing to only your application by providing a more specific path, *./eks-anywhere-common/Addons/Partner/foobar* for example will deploy anything found in the *foobar* subdirectory. The *--path* setting must match the location where your deployment is setup, not the location for the testJob. 
 
 The name, in this example *addons-snow-partner*, is arbitrary. As mentioned the value for the *--source* argument must match the name given when the source reference was created.
